@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <style>
+    #area {
+      width: 200px;
+      height: 200px;
+      background-color: #953674;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="area"></div>
+  <br>
+  <button id="reset" onclick="reset();">Reset</button>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $("#area").on("mouseenter", function () {
+        $(this).css("background-color", "green");
+        alert("Close me to turn the box green.");
+      });
+    });
+
+    function reset() {
+      $("#area").css("background-color", "#953674");
+    }
+  </script>
+</body>
+
+</html>
